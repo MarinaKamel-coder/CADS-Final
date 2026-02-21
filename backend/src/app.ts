@@ -7,10 +7,10 @@ import { fileURLToPath } from 'url';
 
 
 // Import des routes
-import clientRoutes from './routes/client.routes';
-import deadlineRoutes from './routes/deadline.routes';
-import documentRoutes from './routes/document.routes';
-import alertRoutes from "./routes/alert.routes";
+import clientRoutes from './routes/client.routes.js';
+import deadlineRoutes from './routes/deadline.routes.js';
+import documentRoutes from './routes/document.routes.js';
+import alertRoutes from "./routes/alert.routes.js";
 
 // Import des middlewares
 import { clerkAuth, requireAuth } from './middlewares/clerk.middleware.js';
