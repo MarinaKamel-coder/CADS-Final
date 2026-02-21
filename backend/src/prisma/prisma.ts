@@ -1,6 +1,5 @@
 import { PrismaNeon } from '@prisma/adapter-neon';
-import pkg from "../generated/prisma/client.js";
-const { PrismaClient } = pkg;
+import { PrismaClient } from "../generated/prisma/client.js";
 import dotenv from "dotenv";
  
 dotenv.config();
