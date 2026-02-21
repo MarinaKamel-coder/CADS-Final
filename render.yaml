@@ -4,8 +4,8 @@ services:
     env: node
     plan: free
     buildCommand: >
-      NPM_CONFIG_PRODUCTION=false npm install --prefix backend &&
-      NPM_CONFIG_PRODUCTION=false npm install --prefix frontend &&
+      NPM_CONFIG_PRODUCTION=false npm ci --prefix backend &&
+      NPM_CONFIG_PRODUCTION=false npm ci --prefix frontend &&
       node ./backend/node_modules/prisma/build/index.js generate --schema=./backend/prisma/schema.prisma &&
       npm run build --prefix backend &&
       npm run build --prefix frontend
@@ -24,11 +24,11 @@ services:
     env: node
     plan: free
     buildCommand: >
-      NPM_CONFIG_PRODUCTION=false npm install &&
+      NPM_CONFIG_PRODUCTION=false npm ci &&
       npm run build
     startCommand: npm run preview
     staticPublishPath: dist
-    dirs:
+    directories:
       source: frontend
     envVars:
       - key: NPM_CONFIG_PRODUCTION
