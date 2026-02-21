@@ -14,7 +14,7 @@ datasource db {
 }
 
 model User {
-  id        String   @id              // Clerk userId
+  id        String   @id // Clerk userId
   email     String   @unique
   firstName String
   lastName  String
@@ -35,7 +35,7 @@ model Client {
   id        String       @id @default(uuid())
   firstName String
   lastName  String
-  email     String       
+  email     String
   phone     String
   nasNumber String
   address   String
@@ -53,15 +53,15 @@ model Client {
 }
 
 model Document {
-  id         String         @id @default(uuid())
-  name       String
-  type       String
-  size       Int
-  filePath   String
+  id          String         @id @default(uuid())
+  name        String
+  type        String
+  size        Int
+  filePath    String
   fileContent Bytes?
-  status     DocumentStatus @default(PENDING)
-  uploadedAt DateTime       @default(now())
-  updatedAt  DateTime       @updatedAt
+  status      DocumentStatus @default(PENDING)
+  uploadedAt  DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
 
   clientId String
   client   Client @relation(fields: [clientId], references: [id], onDelete: Cascade)
