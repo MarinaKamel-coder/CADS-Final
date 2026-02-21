@@ -7,7 +7,8 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "lib": ["ES2022"],
-    "types": ["node", "vite/client"]
+    "typeRoots": ["../types", "./node_modules/@types"],
+    "noImplicitAny": false
   },
   "include": ["vite.config.ts", "vitest.config.ts"]
 }
