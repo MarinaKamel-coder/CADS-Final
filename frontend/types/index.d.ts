@@ -5,5 +5,6 @@
 /// <reference types="react-dom" />
 /// <reference path="./vite.d.ts" />
 /// <reference path="./env.d.ts" />
+/// <reference path="./react-global.d.ts" />
 
 export {};
